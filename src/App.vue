@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { ConfigProvider, Button } from 'ant-design-vue';
+import { ConfigProvider } from 'ant-design-vue';
 import { ref } from 'vue';
 
 const theme = ref({

@@ -55,10 +55,8 @@ import selectRole from '@/components/role/select.role.vue';
 import api from '@/plugins/axios';
 import { errorM, successM } from '@/util/message.util';
 import { useUser } from '../store';
-import { storeToRefs } from 'pinia';
 
 const userStore = useUser();
-const { usersList } = storeToRefs(userStore);
 
 // console.log(emailSchema)
 const formState = reactive({

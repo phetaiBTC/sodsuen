@@ -12,7 +12,7 @@
 <script setup lang="ts">
 import type { Rule } from 'ant-design-vue/es/form'
 
-const props = defineProps<{
+defineProps<{
     modelValue: string
     label: string
     rules: Rule[]

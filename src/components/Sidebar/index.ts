@@ -4,7 +4,6 @@
     // { key: 'sub2', label: 'Team', icon: TeamOutlined, children: [{ key: '6', label: 'Team 1', route: 'home' }, { key: '8', label: 'Team 2', route: 'home' }] },
     // { key: '9', label: 'File', icon: FileOutlined, route: 'home' },
 import {
-    PieChartOutlined,
     DesktopOutlined,
     UserOutlined,
     TeamOutlined,
