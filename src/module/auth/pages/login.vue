@@ -40,8 +40,8 @@ interface FormState {
   remember: boolean;
 }
 const formState = reactive<FormState>({
-  email: 'admin@gmail.com',
-  password: '1234',
+  email: '',
+  password: '',
   remember: true,
 });
 const onFinish = async (values: any) => {
