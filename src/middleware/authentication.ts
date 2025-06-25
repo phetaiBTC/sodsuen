@@ -3,6 +3,7 @@ import type { NavigationGuardNext, RouteLocationNormalized } from 'vue-router';
 import { isTokenExpired } from '@/util/jwt';
 export function authMiddleware(
   to: RouteLocationNormalized,
+  _from: RouteLocationNormalized,
   next: NavigationGuardNext
 ) {
   const token = localStorage.getItem('token');

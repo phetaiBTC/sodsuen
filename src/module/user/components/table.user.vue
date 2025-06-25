@@ -26,7 +26,7 @@
 import { UserColumns, type UserItem } from '../entity'
 import { ref, onMounted } from 'vue';
 import api from '@/plugins/axios';
-import { errorM, successM } from '@/util/message.util';
+import { successM } from '@/util/message.util';
 import { useUser } from '../store';
 import { storeToRefs } from 'pinia';
 const userStore = useUser();
