@@ -1,8 +1,12 @@
 // src/plugins/axios.ts
+import { Bi18n } from '@/util/Bi18n';
+import { errorM } from '@/util/message.util';
 import axios from 'axios'
+const baseURL = import.meta.env.VITE_BEAS_URL; // ✅ แก้ชื่อให้ถูกต้อง
 
+console.log(baseURL)
 const api = axios.create({
-  baseURL: 'https://api.example.com',
+  baseURL: baseURL,
   headers: {
     'Content-Type': 'application/json'
   }
@@ -21,7 +25,8 @@ api.interceptors.request.use(config => {
 api.interceptors.response.use(
   response => response,
   error => {
-    if (error.response && error.response.status === 401) {
+    if (error.response && error.response.status === 403) {
+      errorM(Bi18n('unauthorized'));
       console.warn('Unauthorized')
     }
     return Promise.reject(error)

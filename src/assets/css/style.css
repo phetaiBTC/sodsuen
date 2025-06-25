@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+/* 
+#A86523  rgb(168, 101, 35)
+#E9A319  rgb(233, 163, 25)
+#FAD59A  rgb(250, 213, 154)
+#FCEFCB  rgb(252, 239, 203) 
+*/
+.S-bg {
+    background: #FCEFCB;
+}
+
+.S-shadow {
+    filter: drop-shadow(4px 4px 10px #E9A319) drop-shadow(-4px -4px 10px rgba(255, 255, 255, 0.25));
+}
+
+.bgc0 {
+    background-color: #131010 !important;
+
+}
+
+.bgc1 {
+    background-color: #A86523 !important;
+}
+
+.bgc2 {
+    background-color: #E9A319 !important;
+}
+
+.bgc3 {
+    background-color: #FAD59A !important;
+}
+
+.bgc4 {
+    background-color: #FCEFCB !important;
+}
+
+@font-face {
+    font-family: 'Flao';
+    src: url('/src/assets/fonts/NotoSansLao-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Flao', sans-serif !important;
+}
+
+.hide-scrollbar {
+    overflow: auto;
+    /* ยังสามารถ scroll ได้ */
+    scrollbar-width: none;
+    /* สำหรับ Firefox */
+    -ms-overflow-style: none;
+    /* สำหรับ IE และ Edge */
+
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+    /* สำหรับ Chrome, Safari และ Opera */
+}

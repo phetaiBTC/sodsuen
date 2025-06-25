@@ -1,8 +1,19 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HelloWorld from "../components/HelloWorld.vue";
 import { authRouter } from "@/module/auth/router";
+import defaultLayout from "@/layouts/default.layout.vue";
+import { userRouter } from "@/module/user/router";
+import { authMiddleware } from "@/middleware/authentication";
 const routes = [
-    { path: "/", component: HelloWorld },
+    {
+        path: "/",
+        component: defaultLayout,
+        children: [
+            { path: "/", name: "home", component: HelloWorld },
+            ...userRouter
+        ],
+        meta: { requiresAuth: true }
+    },
     ...authRouter
 ]
 
@@ -10,3 +21,5 @@ export const router = createRouter({
     history: createWebHistory(),
     routes
 })
+
+router.beforeEach(authMiddleware);
