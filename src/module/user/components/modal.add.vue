@@ -5,25 +5,25 @@
             <a-row :gutter="16">
                 <a-col :span="12">
                     <BaseInput v-model="formState.username" label="username" :icon="UserOutlined"
-                        :rules="addUserSchema.username.rules" />
+                        :rules="[Vrequired('username')]" />
                 </a-col>
                 <a-col :span="12">
                     <BaseInput v-model="formState.email" label="email" :icon="MailOutlined"
-                        :rules="addUserSchema.email.rules" />
+                        :rules="[Vrequired('email'), Vemail()]" />
                 </a-col>
             </a-row>
-            
+
             <a-row :gutter="16">
                 <a-col :span="12">
                     <BaseInputPassword v-model="formState.password" label="password" :icon="LockOutlined"
-                        :rules="addUserSchema.password.rules" />
+                        :rules="[Vrequired('password')]" />
                 </a-col>
                 <a-col :span="12">
                     <BaseInput v-model="formState.phone" label="phone" :icon="PhoneOutlined"
-                        :rules="addUserSchema.phone.rules" />
+                        :rules="[Vrequired('phone'), Vnumber('phone'), Vphone()]" />
                 </a-col>
             </a-row>
-            
+
             <a-row :gutter="16">
                 <a-col :span="12">
                     <select-province />
@@ -32,11 +32,11 @@
                     <select-dictrict @change="formState.districtId = $event" />
                 </a-col>
             </a-row>
-            
+
 
             <a-row :gutter="16" style="margin-top: 25px;">
                 <a-col :span="12">
-                    <select-role @change="formState.roleId = $event"/>
+                    <select-role @change="formState.roleId = $event" />
                 </a-col>
             </a-row>
         </a-form>
@@ -47,7 +47,6 @@
 import { UserOutlined, MailOutlined, LockOutlined, PhoneOutlined } from '@ant-design/icons-vue';
 import BaseInput from '@/components/BaseInput.vue';
 import { reactive } from 'vue';
-import { addUserSchema } from '../schema';
 import BaseInputPassword from '@/components/BaseInputPassword.vue';
 import selectDictrict from '@/components/district/select.dictrict.vue';
 import selectProvince from '@/components/province/select.province.vue';
@@ -55,6 +54,7 @@ import selectRole from '@/components/role/select.role.vue';
 import api from '@/plugins/axios';
 import { errorM, successM } from '@/util/message.util';
 import { useUser } from '../store';
+import { Vemail, Vnumber, Vphone, Vrequired } from '@/schema/baseSchema';
 
 const userStore = useUser();
 
@@ -76,7 +76,7 @@ const props = defineProps({
 
 const emit = defineEmits(['update:visible']);
 
-const handleOk =async () => {
+const handleOk = async () => {
     await api.post('/users', formState).then(res => {
         successM(res.data.message);
         userStore.getAllUsers();

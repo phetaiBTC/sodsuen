@@ -6,7 +6,10 @@ import Antd from 'ant-design-vue';
 import {router} from './router'
 import { i18n } from '@/plugins/i18n';
 import { createPinia } from 'pinia';
+import { SearchOutlined } from '@ant-design/icons-vue';
+
 const app = createApp(App)
+app.component('SearchOutlined', SearchOutlined)
 app.use(createPinia())
 app.use(router)
 app.use(i18n)

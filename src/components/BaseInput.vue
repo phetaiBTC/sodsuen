@@ -3,7 +3,7 @@
         <a-input :placeholder="$t(label)" class="no-spinner" :value="modelValue"
             @input="emit('update:modelValue', $event.target.value)">
             <template #prefix>
-                <component :is="icon" class="site-form-item-icon" />
+                <component :is="icon" class="site-form-item-icon" style="margin-right: 5px;"/>
             </template>
         </a-input>
     </a-form-item>

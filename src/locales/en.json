@@ -49,11 +49,15 @@
     "logout": "Logout",
     "error": "Error",
     "manage_users": "Manage Users",
+    "manage_products": "Manage Products",
     "user": "User",
+    "unit": "Unit",
     "username": "Username",
     "district": "District",
     "province": "Province",
     "role": "Role",
-    "You_do_not_have_access_rights":"You do not have access rights",
-    "unauthorized":"Unauthorized"
+    "You_do_not_have_access_rights": "You do not have access rights",
+    "unauthorized": "Unauthorized",
+    "search": "Search",
+    "symbol": "Symbol"
 }

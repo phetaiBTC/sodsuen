@@ -3,7 +3,7 @@
         <a-input-password :value="modelValue" :placeholder="$t(label)"
             @input="emit('update:modelValue', $event.target.value)">
             <template #prefix>
-                <component :is="icon" class="site-form-item-icon" />
+                <component :is="icon" class="site-form-item-icon" style="margin-right: 5px;"/>
             </template>
         </a-input-password>
     </a-form-item>

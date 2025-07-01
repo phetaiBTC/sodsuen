@@ -15,12 +15,12 @@
                     <template #title>
                         <span>
                             <component :is="item.icon" />
-                            <span>{{ item.label }}</span>
+                            <span>{{ $t(item.label) }}</span>
                         </span>
                     </template>
                     <a-menu-item v-for="child in item.children" :key="child.label">
                         <router-link :to="{ name: child.route}">
-                            {{ child.label }}
+                            {{ $t(child.label) }}
                         </router-link>
 
                     </a-menu-item>

@@ -1,10 +1,12 @@
 <template>
-  <a-select v-model:value="value" style="width: 100%" :placeholder="$t('district')" :options="options"
-    @change="handleChange">
-    <template #suffixIcon>
-      <AimOutlined />
-    </template>
-  </a-select>
+
+    <a-select v-model:value="value" style="width: 100%" :placeholder="$t('district')" :options="options"
+      @change="handleChange">
+      <template #suffixIcon>
+        <AimOutlined />
+      </template>
+    </a-select>
+
 </template>
 
 <script lang="ts" setup>
