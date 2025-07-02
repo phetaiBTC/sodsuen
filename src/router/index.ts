@@ -1,20 +1,23 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HelloWorld from "../components/HelloWorld.vue";
+import Indexpage from "../components/HelloWorld.vue";
 import { authRouter } from "@/module/auth/router";
 import defaultLayout from "@/layouts/default.layout.vue";
 import { userRouter } from "@/module/user/router";
 import { authMiddleware } from "@/middleware/authentication";
 import { unitsRouter } from "@/module/units/router";
 import { categoriesRouter } from "@/module/categories/router";
+import { suppliersRouter } from "@/module/suppliers/router";
+
 const routes = [
     {
         path: "/",
         component: defaultLayout,
         children: [
-            { path: "/", name: "home", component: HelloWorld },
+            { path: "/", name: "home", component: Indexpage },
             ...userRouter,
             ...unitsRouter,
-            ...categoriesRouter
+            ...categoriesRouter,
+            ...suppliersRouter
         ],
         meta: { requiresAuth: true }
     },

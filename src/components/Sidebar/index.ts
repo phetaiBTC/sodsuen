@@ -32,8 +32,5 @@ export const menuSidebar: MenuItem[] = [
             { label: 'category', route: 'categories.index' }
         ]
     },
-    { label: 'Option 2', icon: DesktopOutlined, route: 'home' },
-    { label: 'Team', icon: TeamOutlined, children: [{ label: 'Team 1', route: 'home' }, { label: 'Team 2', route: 'home' }] },
-    { label: 'File', icon: FileOutlined, route: 'home' },
-    { label: 'Setting', icon: FileOutlined, route: 'home' }
+    { label: 'supplier', icon: DesktopOutlined, route: 'suppliers.index' }
 ]
