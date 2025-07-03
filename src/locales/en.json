@@ -60,5 +60,7 @@
     "unauthorized": "Unauthorized",
     "search": "Search",
     "symbol": "Symbol",
-    "supplier":"Supplier"
+    "supplier":"Supplier",
+    "payment_terms":"Payment Terms",
+    "contact_person":"Contact Person"
 }

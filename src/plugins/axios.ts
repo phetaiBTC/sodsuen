@@ -33,4 +33,15 @@ api.interceptors.response.use(
   }
 )
 
+api.interceptors.response.use(
+  response => response,
+  error => {
+    if (error.response && error.response.status === 401) {
+      errorM(Bi18n('unauthorized'));
+      console.warn('Unauthorized')
+    }
+    return Promise.reject(error)
+  }
+)
+
 export default api

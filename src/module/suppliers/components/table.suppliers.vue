@@ -12,7 +12,7 @@
             <template v-if="column.key === 'operation'">
                 <div class="w-full flex justify-around">
                     <a-button type="primary" @click="onEdit(record)">{{ $t('edit') }}</a-button>
-                    <a-popover :open="openPopover === record.id" :title="$t('delete') + ' ?'" trigger="click">
+                    <a-popover :open="openPopover === record.id" :title="$t('delete') + ' ?'" trigger="click" placement="topRight">
                         <template #content>
                             <a @click="openPopover = null">{{ $t('close') }}</a>
                             <a @click="onDelete(record.id)" style="margin-left: 10px; color: red;">{{ $t('confirm')

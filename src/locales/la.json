@@ -60,5 +60,7 @@
     "unauthorized": "ທ່ານບໍ່ມີສິດໃນການເຂົ້າເຖິງ",
     "search": "ຄົ້ນຫາ",
     "symbol": "ຫົວໜ່ວຍ",
-    "supplier":"ຜູ້ສະໜອງ"
+    "supplier":"ຜູ້ສະໜອງ",
+    "payment_terms":"ເງື່ອນໄຂການຈ່າຍເງິນ",
+    "contact_person":"ຜູ້ຕິດຕໍ່"
 }
